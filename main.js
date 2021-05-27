@@ -24,7 +24,7 @@ water.position.z = -150;
 water.rotation.x = - Math.PI / 2;
 scene.add( water );
 
-const skyTexture = new THREE.TextureLoader().load('sky.png');
+const skyTexture = new THREE.TextureLoader().load('sky.svg');
 scene.background = skyTexture;
 
 const pointLight = new THREE.PointLight(0xffffff);
