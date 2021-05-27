@@ -15,7 +15,7 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 camera.position.setZ(0);
 renderer.render( scene, camera );
 
-const waterGeo = new THREE.PlaneGeometry( 10000, 10000 );
+const waterGeo = new THREE.PlaneGeometry( 10000, 10000, 24, 18 );
 const waterMat = new THREE.MeshBasicMaterial( { color: 0x226699 } );
 
 const water = new THREE.Mesh( waterGeo, waterMat );
@@ -33,7 +33,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
 const sun = new THREE.Mesh(
-  new THREE.SphereGeometry(33, 32, 24),
+  new THREE.SphereGeometry(33, 24, 18),
   new THREE.MeshBasicMaterial( {
     color: 0xFFF07C
   } )
@@ -47,9 +47,9 @@ scene.add(sun);
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  sun.rotation.x += 0.05;
-  sun.rotation.y += 0.075;
-  sun.rotation.z += 0.05;
+  sun.rotation.x += 0.005;
+  sun.rotation.y += 0.0075;
+  sun.rotation.z += 0.005;
 
   camera.position.z = t * -0.01;
 }

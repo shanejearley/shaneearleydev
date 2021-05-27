@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 body {
+  margin: 0;
   height: 5000px;
-  overflow-x: hidden;
 }
 
 canvas {
@@ -22,7 +22,6 @@ main {
   position: absolute;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   margin: 0px auto;
   padding: 50vh 0px;
   z-index: 99;
@@ -35,7 +34,6 @@ canvas {
   position: fixed;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   top: 0;
   left: 0;
 }
