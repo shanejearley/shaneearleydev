@@ -66,7 +66,8 @@
 
       	float diff = saturate( fragmentLinearEyeDepth - linearEyeDepth );
 
-      	vec2 displacement = texture2D( tDudv, ( vUv * 2.0 ) - time * 0.05 ).rg;
+        /* We control the speed of the water here by changing the multiple of time */
+      	vec2 displacement = texture2D( tDudv, ( vUv * 2.0 ) - time * 0.015 ).rg;
       	displacement = ( ( displacement * 2.0 ) - 1.0 ) * 1.0;
       	diff += displacement.x;
 
@@ -80,10 +81,11 @@
       }
     </script>
     <canvas id="bg"></canvas>
+    <img src="logo.svg" alt="Company logo">
     <main>
       <header>
         <h1>Shane Earley</h1>
-        <p>New site coming soon!</p>
+        <p>Welcome to my site!</p>
       </header>
     </main>
 

@@ -2,7 +2,6 @@
 
 body {
   margin: 0;
-  height: 5000px;
 }
 
 canvas {
@@ -16,6 +15,14 @@ canvas {
   --spacing: 350px;
 
   font-family: 'Varela Round', sans-serif;
+}
+
+img {
+  position: absolute;
+  z-index: 99;
+  height: 25vh;
+  left: calc(50% - (25vh / 2));
+  top: 25vh;
 }
 
 main {
@@ -39,10 +46,13 @@ canvas {
 }
 
 header {
-  grid-column: 1 / span 12;
+  grid-column: 2 / span 10;
   padding: 2rem;
   margin-bottom: var(--spacing);
   text-align: center;
+
+  /* For now to enable scrolling */
+  padding-bottom: 5000px;
 }
 
 h1 {

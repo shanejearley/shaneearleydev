@@ -104,7 +104,7 @@ scene.add(pointLight, ambientLight);
 
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(150, 240, 180),
-  new THREE.MeshBasicMaterial( {
+  new THREE.MeshStandardMaterial( {
     color: 0xFFF07C
   } )
 )
@@ -121,7 +121,7 @@ function moveCamera() {
   sun.rotation.y += 0.0075;
   sun.rotation.z += 0.005;
 
-  camera.position.z = t * -0.01;
+  camera.position.z = t * -0.025;
 }
 
 document.body.onscroll = moveCamera;
