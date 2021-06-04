@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
 
 body {
   margin: 0;
@@ -14,7 +14,8 @@ canvas {
   --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
 
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 img {
@@ -56,13 +57,10 @@ header {
 }
 
 h1 {
+  font-family: 'Varela Round', sans-serif;
   font-size: 4rem;
-  line-height: 1.125;
-  font-weight: 600;
 }
 
 p {
-  font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 1.25;
+  font-size: 1.5rem;
 }

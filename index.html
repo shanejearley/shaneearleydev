@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shane Earley Dev</title>
+    <title>Shane Earley</title>
   </head>
   <body>
     <script id="vertexShader" type="x-shader/x-vertex">
@@ -67,7 +67,7 @@
       	float diff = saturate( fragmentLinearEyeDepth - linearEyeDepth );
 
         /* We control the speed of the water here by changing the multiple of time */
-      	vec2 displacement = texture2D( tDudv, ( vUv * 2.0 ) - time * 0.015 ).rg;
+      	vec2 displacement = texture2D( tDudv, ( vUv * 2.0 ) - time * 0.0075 ).rg;
       	displacement = ( ( displacement * 2.0 ) - 1.0 ) * 1.0;
       	diff += displacement.x;
 
@@ -85,7 +85,7 @@
     <main>
       <header>
         <h1>Shane Earley</h1>
-        <p>Welcome to my site!</p>
+        <p>Welcome to my site! More to come...</p>
       </header>
     </main>
 
