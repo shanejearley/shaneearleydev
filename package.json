@@ -7,9 +7,24 @@
     "serve": "vite preview"
   },
   "devDependencies": {
+    "auto-changelog": "^2.3.0",
     "vite": "^2.3.4"
   },
   "dependencies": {
     "three": "^0.128.0"
+  },
+  "release-it": {
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": true
+    },
+    "git": {
+      "changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
+    },
+    "hooks": {
+      "after:bump": "npx auto-changelog -p"
+    }
   }
 }
