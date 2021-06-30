@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Varela+Round&display=swap');
 
-body {
+html, body {
+  height: fit-content;
   margin: 0;
+}
+
+body {
+  height: 5000px;
 }
 
 canvas {
@@ -11,31 +16,41 @@ canvas {
 }
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
   --spacing: 350px;
 
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
 }
 
-img {
-  position: absolute;
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
   z-index: 99;
-  height: 25vh;
-  left: calc(50% - (25vh / 2));
-  top: 25vh;
+  max-width: 1280px;
+  margin: auto;
 }
 
+
 main {
+  top: 25vh;
   position: absolute;
   width: 100%;
   max-width: 100%;
   margin: 0px auto;
-  padding: 50vh 0px;
   z-index: 99;
   color: white;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+main > img {
+  height: 25vh;
+  position: absolute;
+  left: calc(50% - (25vh / 2));
 }
 
 canvas {
@@ -46,21 +61,37 @@ canvas {
   left: 0;
 }
 
-header {
+main > header {
   grid-column: 2 / span 10;
   padding: 2rem;
   margin-bottom: var(--spacing);
   text-align: center;
-
-  /* For now to enable scrolling */
-  padding-bottom: 5000px;
 }
 
 h1 {
   font-family: 'Varela Round', sans-serif;
-  font-size: 4rem;
 }
 
-p {
-  font-size: 1.5rem;
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.logo span {
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+}
+
+.logo img {
+  margin: 0 5px;
+  height: 1.5em;
+}
+
+a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
 }

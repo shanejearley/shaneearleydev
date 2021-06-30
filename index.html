@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shane Earley</title>
   </head>
@@ -80,15 +81,23 @@
 
       }
     </script>
-    <canvas id="bg"></canvas>
-    <img src="logo.svg" alt="Company logo">
-    <main>
-      <header>
-        <h1>Shane Earley</h1>
-        <p>Welcome to my site! More to come...</p>
-      </header>
-    </main>
 
-    <script type="module" src="/main.js"></script>
+    <nav>
+      <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <img src="logo-white.svg" alt="Company logo">
+        <span>Shane Earley</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/shanejearley" target="_blank" class="fab fa-github"></a>
+        <a href="https://twitter.com/shanejearley" target="_blank" class="fab fa-twitter"></a>
+        <a href="https://linkedin.com/in/shanejearley/" target="_blank" class="fab fa-linkedin"></a>
+      </div>
+    </nav>
+    <main>
+      <img src="logo.svg" alt="Company logo">
+    </main>
+    <canvas id="bg"></canvas>
+
+    <script type="module" src="/canvas.js"></script>
   </body>
 </html>
